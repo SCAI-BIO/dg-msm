@@ -1,0 +1,44 @@
+[project]
+name = "dgmsm"
+version = "0.1.0"
+description = "Dynamic Generative Multi-State Model"
+license = { file = "LICENSE" }
+authors = [
+  {name = "Sebastian Schwick", email = "sebastian.schwick@scai.fraunhofer.de"}
+]
+dependencies = [
+  "numpy",
+  "pandas",
+  "torch",
+  "sqlalchemy",
+  "scikit-learn",
+  "scipy",
+  "matplotlib",
+  "psycopg2-binary",
+  "lifelines",
+  "seaborn",
+  "captum",
+  "numba",
+  "optuna",
+  "plotly",
+  "nbformat",
+  "numexpr",
+  "syndat",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "python-dotenv", 
+  ]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = [
+  "msprep", 
+  "dgmsm",
+  "survmetrics", 
+  ]

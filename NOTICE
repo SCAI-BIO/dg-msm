@@ -1,0 +1,20 @@
+This project includes code adapted from pycox
+(https://github.com/havakv/pycox), specifically parts of the
+EvalSurv class (pycox.evaluation.EvalSurv), used in modified form as
+the SurvMetrics class in src/survmetrics/survmetrics.py.
+
+Copyright (c) 2018, Haavard Kvamme
+All rights reserved.
+
+Licensed under the BSD 2-Clause License. The full license text is
+available at: src/survmetrics/LICENSE-pycox.txt
+
+Modifications include:
+- Renamed EvalSurv to SurvMetrics
+- Added new methods: auc_ipcw, integrated_auc_ipcw,
+  concordance_td_ipcw, concordance_td_ipcw_truncated,
+  integrated_brier_score_truncated, integrated_nbll_truncated,
+  integrated_auc_ipcw_truncated
+- Added internal helper methods for safe metric computation
+  (_safe_run, _safe_scalar_metric, _safe_curve_metric, etc.)
+- Added logging support
